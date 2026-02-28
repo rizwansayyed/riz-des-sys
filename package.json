@@ -1,5 +1,5 @@
 {
-  "name": "my-design-system",
+  "name": "riz-des-sys",
   "private": true,
   "version": "0.0.0",
   "packageManager": "pnpm@9.0.0",
@@ -7,8 +7,5 @@
     "build:tokens": "pnpm --filter @ds/tokens build",
     "build:components": "pnpm --filter @ds/components build",
     "dev": "pnpm --filter @ds/docs dev"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }
