@@ -1,14 +1,18 @@
 import StyleDictionary from 'style-dictionary';
 import { register } from '@tokens-studio/sd-transforms';
 
-// Register Token Studio transforms
 register(StyleDictionary);
 
 const sd = new StyleDictionary({
   source: ['src/**/*.json'],
   platforms: {
     css: {
-      transformGroup: 'tokens-studio',
+      transforms: [
+        'ts/resolveMath',
+        'ts/size/px',
+        'ts/color/modifiers',
+        'name/kebab',
+      ],
       prefix: 'ds',
       buildPath: 'dist/css/',
       files: [{
@@ -17,7 +21,13 @@ const sd = new StyleDictionary({
       }]
     },
     js: {
-      transformGroup: 'tokens-studio',
+      transforms: [
+        'ts/resolveMath',
+        'ts/size/px',
+        'ts/color/modifiers',
+        'name/camel',
+      ],
+      prefix: 'ds',
       buildPath: 'dist/js/',
       files: [{
         destination: 'tokens.js',

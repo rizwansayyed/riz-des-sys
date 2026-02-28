@@ -1,0 +1,51 @@
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: var(--ds-typography-font-family-base);
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.ds-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.ds-button--primary {
+  background-color: var(--ds-color-brand-primary);
+  color: #ffffff;
+}
+
+.ds-button--secondary {
+  background-color: var(--ds-color-brand-secondary);
+  color: #ffffff;
+}
+
+.ds-button--ghost {
+  background-color: transparent;
+  color: var(--ds-color-brand-primary);
+  border: 1px solid var(--ds-color-brand-primary);
+}
+
+/* Sizes */
+.ds-button--sm {
+  padding: var(--ds-spacing-2) var(--ds-spacing-3);
+  font-size: var(--ds-typography-font-size-sm);
+  border-radius: 4px;
+}
+
+.ds-button--md {
+  padding: var(--ds-spacing-3) var(--ds-spacing-4);
+  font-size: var(--ds-typography-font-size-md);
+  border-radius: 6px;
+}
+
+.ds-button--lg {
+  padding: var(--ds-spacing-4) var(--ds-spacing-6);
+  font-size: var(--ds-typography-font-size-lg);
+  border-radius: 8px;
+}

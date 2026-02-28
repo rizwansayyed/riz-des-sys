@@ -1,0 +1,22 @@
+{
+  "name": "@ds/docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build -o dist"
+  },
+  "devDependencies": {
+    "@storybook/react": "^8.0.0",
+    "@storybook/react-vite": "^8.0.0",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-a11y": "^8.0.0",
+    "vite": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@ds/components": "workspace:*",
+    "@ds/tokens": "workspace:*"
+  }
+}
